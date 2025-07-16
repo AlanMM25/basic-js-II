@@ -10,26 +10,79 @@ console.log('Hola soy tu consola y juntas vamos a aprender Javascript')
 
 //Ejercicio 1: Escribe un condicional if/else que imprima en la consola 'Eres mayor de edad' cuando la constante age tenga el valor correspondiente, si no es así, debe imprimir 'No eres aún mayor de edad'
 
-const age = 18
+let age = 18
+let underAge = 'Aún no eres mayor de edad'
+let overAge = 'Eres mayor de edad'
+
+function ageRegister(){
+    if (age >= 18){
+        return overAge
+    }
+    else{
+        return underAge
+    }
+}
+
+// age >=18?overAge:underAge
+
+console.log(ageRegister())
 //Escribe tu código aquí
 
 
 //Ejercicio 2: Cambia el valor de age a 12 para mirar el resultado del ejercicio anterior.
 
+age = 12
+
+console.log(ageRegister())
+
 
 //Ejercicio 3: Escribe un condicional if/else que lea la constante pet y si es un perro, que imprima en la consola "Tengo un perro", si es un gato, que imprima en la consola "Tengo un gato", si es un pájaro, que imprima en la consola "Tengo un pájaro" y si no es ninguno de los 3 que imprima "No tengo una mascota convencional"
 
-const pet = "perro";
+const pet = 'Pájaro'
+
+function petType(pet){
+    if (pet.toLowerCase() === 'perro'){
+        return 'Tengo un perro'
+    }
+    if (pet.toLowerCase() === 'gato'){
+        return 'Tengo un gato'
+    }
+    if (pet.toLowerCase() === 'pájaro'){
+        return 'Tengo un pájaro'
+    }
+    else{
+        return 'No tengo un mascota convencional'
+    }
+}
+
+
+console.log(petType('GaTo'))
 //Escribe tu código aquí
 
 
 //Ejercicio 4: cambia el valor de pet a "serpiente" y mira el resultado en consola para comprobar que tu código funciona bien.
+
+console.log(petType('Serpiente'))
 
 
 //Ejercicio 5: Haz el mismo ejercicio 3, pero con el condicional switch.
 
 //Escribe tu código aquí
 
+let pet2 = 'Pájaro'
+
+switch(pet2.toLowerCase()){
+    case 'perro':
+        return 'Tengo un perro'
+        break;
+    case 'gato':
+        return 'Tengo un gato'
+        break;
+    case 'pájaro':
+        return'Tengo un pájaro'
+        break;
+}
+console.log(pet)
 
 //Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante weather e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
 
