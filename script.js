@@ -23,9 +23,12 @@ function ageRegister(){
     }
 }
 
-// age >=18?overAge:underAge
+const ageResult =
+    age >= 18
+    ? (overAge)
+    : (underAge)
 
-console.log(ageRegister())
+console.log(ageResult)
 //Escribe tu código aquí
 
 
@@ -69,26 +72,30 @@ console.log(petType('Serpiente'))
 
 //Escribe tu código aquí
 
-let pet2 = 'Pájaro'
+let pet2 = 'puto cagón'
 
 switch(pet2.toLowerCase()){
     case 'perro':
-        return 'Tengo un perro'
+        console.log('Tengo un perro')
         break;
     case 'gato':
-        return 'Tengo un gato'
+        console.log('Tengo un gato')
         break;
     case 'pájaro':
-        return'Tengo un pájaro'
+        console.log('Tengo un pájaro')
         break;
+    default:
+        console.log(`Tengo un ${pet2.toLowerCase()}.`);
 }
-console.log(pet)
 
 //Ejercicio 6: Usando un operador ternario, escribe un programa que lea la constante weather e imprima en consola si es soleado "Me vestiré con un vestido" y si no es así que imprima "Me vestiré con pantalón"
 
 const weather = "soleado"
 
-const result = //Escribe tu código aquí;
+const result =
+    weather === "soleado"
+    ? ('Me vestiré con vestido')
+    : ('Me vestiré con pantalón');
 
 console.log(result)
 
@@ -96,9 +103,20 @@ console.log(result)
 
 //Ejercicio 8: Escribe un programa que al darle la constante 'value' imprima en consola "Es un número" cuando el valor sea de tipo number, "Es un string" cuando el valor sea de tipo string o si no es ni uno ni otro que imprima "No es ni número ni string". Puedes hacerlo con cualquier tipo de condicional.
 
-const value = '1'
+const value = null
+let valueString = 'Es un string'
+let valueNumber = 'Es un número'
+let valueStringNumber = 'No es ni un número ni una string'
 
-//Escribe tu código aquí
+function valueType(){
+    if (typeof value === 'string')
+        return valueString
+    if (typeof value === 'number')
+        return valueNumber
+    return valueStringNumber
+}
+
+console.log(valueType())
 
 
 //BUCLES
@@ -106,6 +124,11 @@ const value = '1'
 //Ejercicio 9: Imprime en consola una lista del 0 al 10 con el bucle for
 
 //Escribe tu código aquí
+let numList = 0
+
+for (let numList = 0; numList <=10; numList++){
+    console.log('Ahora tienes ' + numList)
+}
 
 
 //Ejercicio 10: Con un bucle for in imprime en pantalla todos los nombres, apellidos y su aporte a la sociedad de las programadoras de la historia contenidas en el array llamado 'programmers', Deberás imprimir el índice y la información de cada una de ellas de la siguiente manera: '0: Ada Lovelace, su aporte fue la máquina analítica'. 
@@ -135,6 +158,10 @@ const programmers = [
 
 //Escribe tu código aquí
 
+for (let i = 0; i < programmers.length; i++){
+    const programmer = programmers[i];
+    console.log(`${programmer.name} ${programmer.lastname}, su aporte fue ${programmer.knowledge}.`);
+}
 
 //Ejercicio 11: Con un bucle for of imprime en consola "Hola, mi nombre es ... " y reemplaza los tres puntos con cada nombre del array dado.
 
