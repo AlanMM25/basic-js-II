@@ -116,7 +116,7 @@ function valueType(){
     return valueStringNumber
 }
 
-console.log(valueType())
+console.log(valueType)
 
 
 //BUCLES
@@ -167,23 +167,44 @@ for (let i = 0; i < programmers.length; i++){
 
 const names = ['Carla', 'Alex', 'Judith', 'Maria', 'Noelia']
 
-//Escribe tu código aquí
+for(let i = 0; i < names.length; i++){
+    const singleName = names[i];
+    console.log(`Hola, mi nombre es ${singleName}`)
+}
 
 
 //Ejercicio 12: Con un bucle while imprime en consola una lista del 1 al 5.
 
 //Escribe tu código aquí
 
+let num = 0
+
+while (num <= 5) {
+    console.log(num++);
+}
+
 
 //Ejercicio 13: Realiza el mismo ejercicio anterior pero con un bucle do while.
 
 //Escribe tu código aquí
 
+let num2 = 0
+
+do{
+      console.log(num2++);
+
+}
+while (num2 <= 5);
+
 
 //Ejercicio 14: Saludo Personalizado
 //Crea una función llamada saludar que tome un parámetro llamado nombre y devuelva un saludo personalizado. Luego, llama a la función con diferentes nombres y muestra el resultado en la consola.
 
-//Escribe tu código aquí
+function saludar(nombre){
+    return `Buenos días, ${nombre}`
+}
+
+console.log(saludar('Anderson'))
 
 
 //Ejercicio 15: Calcular el Área de un Rectángulo
@@ -191,3 +212,8 @@ const names = ['Carla', 'Alex', 'Judith', 'Maria', 'Noelia']
 
 //Escribe tu código aquí
 
+function calcularAreaRectangulo(ancho, alto){
+    return 'el área del rectángulo es ' + (ancho * alto) + 'cm^2'
+}
+
+console.log(calcularAreaRectangulo(4, 5))
